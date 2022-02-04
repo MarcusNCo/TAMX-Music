@@ -59,13 +59,11 @@ fetch('./assets/data/instruments.json') // aller chercher le json
 
         const displayCart = (itemJson) => {
             cartContainer.innerHTML += `${itemJson.original_title} <img src="${itemJson.product_poster}">`;
-            
         }
 
         // affichage des elements du panier
         let cart = JSON.parse(localStorage.getItem('cart'));
         cart.forEach(itemCart => {
-
             datas.clavier.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
                     displayCart(itemJson)
@@ -91,7 +89,18 @@ fetch('./assets/data/instruments.json') // aller chercher le json
                     displayCart(itemJson)
                 }
             });
-
+            
+            // affichage des quantités du panier
+            cart.forEach(quantity => {
+                if (itemCart[1] == 0) {
+                    quantity.innerHTML += `lol`;
+                }
+            });
         });
-
     })
+
+// Button reset panier
+resetCart.addEventListener('click', () => {
+    // supprimer localStorage panier
+    localStorage.removeItem('cart');
+})
