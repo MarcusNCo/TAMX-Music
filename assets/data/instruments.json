@@ -241,9 +241,9 @@
         }
     ],
 
-    "home-studio": [
+    "studio": [
         {
-            "id": 20,
+            "id": 26,
             "original_title": "PSI Audio A25-M Metal Black Model 2021",
             "second_title": "Enceinte de Monitoring",
             "description": "Moniteur actif à 3 voies Fabriqué à la main en Suisse",
@@ -252,7 +252,7 @@
             "vote_average": 10.00
         },
         {
-            "id": 21,
+            "id": 27,
             "original_title": "Yamaha HS 8",
             "second_title": "Enceinte de Monitoring",
             "description": "Enceinte de proximité active 2 voies 8 Prix pour une enceinte",
@@ -261,7 +261,7 @@
             "vote_average": 7.5
         },
         {
-            "id": 22,
+            "id": 28,
             "original_title": "Neumann KH 120 A",
             "second_title": "Enceinte de Monitoring",
             "description": "Enceinte large bande active 2 voies 5,25",
@@ -270,7 +270,7 @@
             "vote_average": 9.0
         },
         {
-            "id": 22,
+            "id": 29,
             "original_title": "KRK Rokit RP7 G4",
             "second_title": "Enceinte de Monitoring",
             "description": "Moniteur de studio actif",
@@ -279,7 +279,7 @@
             "vote_average": 8.0
         },
         {
-            "id": 22,
+            "id": 30,
             "original_title": "Neumann KH 750 DSP",
             "second_title": "Caisson de basse",
             "description": "Caisson de basses de studio actif ",
@@ -288,7 +288,7 @@
             "vote_average": 8.0
         },
         {
-            "id": 23,
+            "id": 31,
             "original_title": "Neumann KH 750 DSP",
             "second_title": "Caisson de basse",
             "description": "Caisson de basses de studio actif ",
@@ -297,7 +297,7 @@
             "vote_average": 8.0
         },
         {
-            "id": 24,
+            "id": 32,
             "original_title": "Presonus Studio 26c",
             "second_title": "Interface audio USB-C 2x4",
             "description": "",
@@ -306,7 +306,7 @@
             "vote_average": 8.5
         },
         {
-            "id": 25,
+            "id": 33,
             "original_title": "Presonus AudioBox 96 Studio Ult 25th An",
             "second_title": "Ensemble studio d'enregistrement",
             "description": "",
