@@ -58,7 +58,8 @@ fetch('./assets/data/instruments.json') // aller chercher le json
         });
 
         const displayCart = (itemJson) => {
-            cartContainer.innerHTML += `${itemJson.original_title} <img src="${itemJson.product_poster}">`;
+            // cartContainer.innerHTML += `${itemJson.original_title} <img src="${itemJson.product_poster}">`;
+            cartImg.innerHTML += `<img class="imgModal m-3" src="${itemJson.product_poster}" alt="image produit">`;
         }
 
         // affichage des elements du panier
@@ -99,8 +100,25 @@ fetch('./assets/data/instruments.json') // aller chercher le json
         });
     })
 
+
 // Button reset panier
 resetCart.addEventListener('click', () => {
     // supprimer localStorage panier
     localStorage.removeItem('cart');
 })
+
+
+// modal
+test.addEventListener('click', () => {
+    myModal.style.display = 'flex';
+    myModalBg.style.display = 'block';
+});
+closeModalBuy.addEventListener('click', () => {
+    myModal.style.display = 'none';
+    myModalBg.style.display = 'none';
+});
+window.onclick = function(event) {
+    if (event.target == myModalBg) {
+        myModalBg.style.display = "none";
+    }
+}
