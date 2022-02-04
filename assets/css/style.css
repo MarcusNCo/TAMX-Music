@@ -2,3 +2,104 @@
     padding: 0;
     margin: 0;
 }
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Border Design */
+
+.card:nth-child(odd){
+    border-color: #1217F7;
+    border-style: solid;
+}
+.card:nth-child(even){
+    border-color: #FF993B;
+    border-style: solid;
+}
+
+/* Card Design */
+.card{
+    width: 500px;
+    height: 500px;
+    margin: 2rem;
+    border-radius: 4px;
+    border-width: 2px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: rgb(197, 194, 194);
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    margin: 0;
+}
+
+.cardInfo{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.cardInfo h3{
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.cardInfo span{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.price{
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.price h4{
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+.price span{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+}
+
+.description h3{
+    font-family: 'Electrolize', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+/* Hover Description */
+.card:hover .description {
+    transform: translateY(0);
+}
