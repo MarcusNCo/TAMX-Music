@@ -1,4 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+
 * {
-    padding: 0;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #313031;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FF3F3A;
+    border-radius: 20px;
+    border: 3px solid #313031;
+}
+
+html, body {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    background-image: url();
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+}
+a{
+    
+    color: #313031 !important;
+    
+}
+.navbar {
+    padding: 2rem 2rem;
+    height: 0rem;
+    min-height: 20vh;
+    position: fixed;
+    background-color: transparent;
+    border: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    
+}
+.nav-item{
+    margin: 0 !important;
+    padding: 0em 1em;
+    align-items: center;
+}
+.nav-item a {
+    color: #313031;
+    text-decoration: none;
+    font: 16px;
+    margin: 0px 5px;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 95%;
+}
+.logo{
+    height: 450px;
+    width: 500px;
+}
+
+@media (max-width: 991px) {
+    .nav-item{
+        background-color: #b6b9c8ce;
+    }
+    .navbar-toggler{
+        border: none;
+    }
+    .logo{
+        display: none;
+    }
+    
+    
+}
+
+/* Top & Bottom Borders Out */
+a:before, a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #313031;
+
+    content:"";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.nav-link:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+.nav-link:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+.nav-link:before {
+    top: 0px;
+    transform: translateX(10px);
+}
+.nav-link:after {
+    bottom: 0px;
+    transform: translateX(-10px);
+}
+.nav-link:hover:before, .nav-link:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+    background: #FF3F3A;
+    
+}
+
+
