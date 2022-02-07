@@ -92,6 +92,10 @@
     font-weight: bold;
 }
 
+.pictureBin {
+    cursor: pointer;
+}
+
 .productPicture  {
     overflow-y: auto;
 
@@ -115,5 +119,9 @@
 .productPrice, .productTitle {
     font-family: "Electrolize";
     margin-left: 1rem;
+}
+
+.price {
+    font-family: "Electrolize";
 }
 
