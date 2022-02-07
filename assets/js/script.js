@@ -3,28 +3,31 @@ fetch('./assets/data/instruments.json') // aller chercher le json
         return response.json(); // retourne ce qu'il a trouver
     })
     .then((datas) => {
-        var datasProduct = datas; // Ce que on recupere on le met dans datasProduct (pour le panier)
-
+        // var datasProduct = datas; // Ce que on recupere on le met dans datasProduct (pour le panier)
 
         // automatise l'ensemble de l'objet datas pour récuperer ses propriétés et permettre de ne plus être limiter si on ajoute une catégorie
         for (const property in datas) {
-            datas[property].forEach((element) => {
+            datas[property].forEach((element) => { 
                 container.innerHTML +=
                     `
-                <div class="row d-flex align-items-center p-4">
-                    <div class="col-12 col-sm-5 col-lg-4 col-xl-3">
-                        <img src="${element.product_poster}" class="img-fluid rounded" alt="image de film"></img>
-                    </div>
-                    <div class="col-12 col-sm-7 col-lg-8 col-xl-9">
-                        <div class="card-body">
-                            <h5 class="card-title title-color fw-bold" data-title="azerty" >${element.original_title}</h5>
-                            <p class="card-text">${element.description}</p>
-                            <p class="card-text"><small class="text-muted">Note: ${element.vote_average}</small></p>
-                            <button type="button" class="btn btn-primary btn-block productItem" data-cat=${property} id=${element.id} >Ajouter au panier</button>
+                    <div class="card w-auto h-auto">
+                        <img src="${element.product_poster}" alt="image du produit">
+                        <div class="cardInfo">
+                            <h3>${element.original_title}</h3>
+                            <span>${element.vote_average}</span>
+                        </div>
+                        <div class="price">
+                            <h4>${element.product_price}</h4>
+                            <span><img src="https://trello.com/1/cards/61fbf22639dd631a43412b82/attachments/61fd0636fc6735413bfa28f6/download/icons8-sac-de-courses-32.png" class="productItem" data-cat=${property} id=${element.id} alt=""></span>
+                        </div>
+
+                        <div class="description">
+                            <h3>Description</h3>
+                            ${element.description}
                         </div>
                     </div>
-                </div>
-                `
+                    `
+                ;
             });
         }
 
@@ -54,47 +57,73 @@ fetch('./assets/data/instruments.json') // aller chercher le json
                         [event.target.getAttribute('id'), 1]
                     ])); // on push un panier
                 }
+                myModal.style.display = 'flex';
+                myModalBg.style.display = 'block';
             })
         });
 
         const displayCart = (itemJson) => {
             // cartContainer.innerHTML += `${itemJson.original_title} <img src="${itemJson.product_poster}">`;
-            cartImg.innerHTML += `<img class="imgModal m-3" src="${itemJson.product_poster}" alt="image produit">`;
+            cartImg.innerHTML +=
+                `
+                <div>${itemJson.original_title}</div>
+                <img class="imgModal m-3" src="${itemJson.product_poster}" alt="image produit">
+                `
+            ;
         }
 
         // affichage des elements du panier
         let cart = JSON.parse(localStorage.getItem('cart'));
+
         cart.forEach(itemCart => {
             datas.clavier.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
-                    displayCart(itemJson)
+                    displayCart(itemJson);
+                    // affichage des quantités du panier
+                    cartImg.innerHTML +=
+                    `
+                    <div>${itemCart[1]}</div>
+                    `;
                 }
             });
             datas.boiteRythme.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
-                    displayCart(itemJson)
+                    displayCart(itemJson);
+                    // affichage des quantités du panier
+                    cartImg.innerHTML +=
+                    `
+                    <div>${itemCart[1]}</div>
+                    `;
                 }
             });
             datas.batterie.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
-                    displayCart(itemJson)
+                    displayCart(itemJson);
+                    // affichage des quantités du panier
+                    cartImg.innerHTML +=
+                    `
+                    <div>${itemCart[1]}</div>
+                    `;
                 }
             });
             datas.guitar.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
-                    displayCart(itemJson)
+                    displayCart(itemJson);
+                    // affichage des quantités du panier
+                    cartImg.innerHTML +=
+                    `
+                    <div>${itemCart[1]}</div>
+                    `;
                 }
             });
             datas.studio.forEach(itemJson => {
                 if (itemCart[0] == itemJson.id) {
-                    displayCart(itemJson)
-                }
-            });
-            
-            // affichage des quantités du panier
-            cart.forEach(quantity => {
-                if (itemCart[1] == 0) {
-                    quantity.innerHTML += `lol`;
+                    displayCart(itemJson);
+                    // affichage des quantités du panier
+                    cartImg.innerHTML +=
+                    `
+                    <div>${itemCart[1]}</div>
+                    `;
                 }
             });
         });
@@ -109,6 +138,8 @@ resetCart.addEventListener('click', () => {
 
 
 // modal
+let productItem = document.querySelectorAll('.productItem');
+
 test.addEventListener('click', () => {
     myModal.style.display = 'flex';
     myModalBg.style.display = 'block';
@@ -122,3 +153,14 @@ window.onclick = function(event) {
         myModalBg.style.display = "none";
     }
 }
+
+const navigation = document.querySelector('nav')
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 500){
+        navigation.classList.add('anim-nav')
+    } else {
+        navigation.classList.remove('anim-nav')
+    }
+})
