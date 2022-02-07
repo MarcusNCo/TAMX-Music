@@ -1,249 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 * {
     padding: 0;
     margin: 0;
 }
 
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-* {
-    margin: 0px;
-    padding: 0px;
-    
-}
 *::-webkit-scrollbar {
     width: 12px;
 }
 
-*::-webkit-scrollbar-track {
+  *::-webkit-scrollbar-track {
     background: #313031;
 }
 
-*::-webkit-scrollbar-thumb {
+  *::-webkit-scrollbar-thumb {
     background-color: #FF3F3A;
     border-radius: 20px;
     border: 3px solid #313031;
 }
 
-html, body {
-    font-family: 'Electrolize', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    margin: 0;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-    scroll-behavior: smooth;
-    background-image: url();
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-header{
+#myModal {
+    width: 50rem;
+    height: 30rem;
     position: absolute;
-    width: 100%;
-    height: 10vh;
-    top: 0;
-    left: 0;
-    padding: 0 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #E9E9E9;
+    overflow-y: hidden;
 }
 
-.navbar{
-    padding: 2rem 2rem;
-    height: 0rem;
-    min-height: 20vh;
-    position: fixed;
-    background: transparent;  
-    
-    border: transparent;
-    transition: all 0.3s ease-out;
+.product {
+    width: 75%;
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
-    
-}
-.nav-item{
-    margin: 0 !important;
-    padding: 0em 1em;
-    align-items: center;
-}
-.nav-item a {
-    text-decoration: none;
-    font: 16px;
-    margin: 0px 5px;
-    padding: 5px 10px;
-    position: relative;
-    z-index: 0;
-    text-align: center;
-
-}
-
-img {
-    max-width: 100%;
-    max-height: 95%;
-}
-.logo{
-    height: 450px;
-    width: 500px;
-}
-
-@media (max-width: 991px) {
-    .nav-item{
-        background-color: #f1f1f1;
+@media screen and (max-width:414px) {
+    #myModal {
+        width: 23rem;
+        height: 40rem;
+        flex-direction: column;
+        
     }
-    .navbar-toggler{
-        border: none;
-    }
-    .logo{
+
+    .blockColor{
         display: none;
     }
+    .imgModal {
+        width: 13rem;
+        height: 9rem;
+        object-fit: contain;
+    }
+
+    .allPrice {
+        width: 100%;
+        border-top: 1px solid #FF3F3A;
+        border-left: none;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .priceTitle {
+        color: #FF3F3A;
+    }
 }
 
-/* Top & Bottom Borders Out */
-a:before, a:after {
-    position: absolute;
-    left: 0px;
+
+.modalBg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 2px;
-    background: #313031;
-    content:"";
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
-.nav-link:before {
-    top: 0px;
-    transform: translateY(10px);
+
+.productPrice {
+    z-index: 5;
 }
-.nav-link:after {
-    bottom: 0px;
-    transform: translateY(-10px);
+
+.productTitle {
+    z-index: 5;
 }
-.nav-link:before {
-    top: 0px;
-    transform: translateX(10px);
+
+.imgModal {
+    width: 25rem;
+    height: 10rem;
+    object-fit: cover;
+    z-index: 10;
 }
-.nav-link:after {
-    bottom: 0px;
-    transform: translateX(-10px);
+
+@media screen and (max-width:414px) {
+    .imgModal {
+        width: 13rem;
+        object-fit: contain;
+    }
 }
-.nav-link:hover:before, .nav-link:hover:after {
-    opacity: 1;
-    transform: translateY(0px);
-    background: #FF3F3A;
+
+.btnBuy {
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    font-family: "Electrolize";
+    font-weight: bold;
+    z-index: 10;
+}
+
+.btn {
+    width: 4rem;
+    border-radius: 0%;
+    font-family: "Electrolize";
+}
+
+.blockQuantityDelete {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dropdown-menu.show {
+    width: 4rem;
+}
+
+.dropdown-menu {
+    min-width: 4rem;
+    overflow-y: scroll;  
+    scrollbar-width: thin;
+    height: 3rem;
+}
+
+.validCart {
+    height: 10rem;
+}
+
+.btnValidCart {
+    margin-left: 1rem;
+    font-family: "Electrolize";
+    font-weight: bold;
+}
+
+.pictureBin {
+    cursor: pointer;
+}
+
+.productPicture  {
+    overflow-y: auto;
+
+}
+
+.pictureBin {
+    width: 2rem;
+    height: 2rem;
+}
+
+.blockColor {
+    height: 15rem;
+    width: 20rem;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    background-color: #FF3F3A;
     
 }
 
-.anim-nav {
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(3px);
-    background: -webkit-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: -moz-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: -o-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+
+.productPrice, .productTitle {
+    font-family: "Electrolize";
+    margin-left: 1rem;
 }
 
-/* Border Design */
-
-.card:nth-child(odd){
-    border-color: #1217F7;
-    border-style: solid;
-}
-.card:nth-child(even){
-    border-color: #FF993B;
-    border-style: solid;
+.price {
+    font-family: "Electrolize";
 }
 
-/* Card Design */
-.card{
-    width: 500px;
-    height: 500px;
-    margin: 2rem;
-    border-radius: 4px;
-    border-width: 2px;
-    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
-    background-color: rgb(197, 194, 194);
-    position: relative;
-    overflow: hidden;
-}
-
-.card img{
-    width: 100%;
-    margin: 0;
-}
-
-.cardInfo{
-    font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
-}
-
-.cardInfo h3{
-    font-family: 'Electrolize', sans-serif;
-    font-weight: bold;
-    margin-top: 0;
-}
-
-.cardInfo span{
-    font-family: 'Roboto', sans-serif;
-    padding: 0.2rem 0.5rem;
-    font-weight: bold;
-}
-
-.price{
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
-}
-.price h4{
-    font-family: 'Electrolize', sans-serif;
-    font-weight: bold;
-    margin-top: 0;
-}
-.price span{
-    font-family: 'Roboto', sans-serif;
-    padding: 0.2rem 0.5rem;
-    font-weight: bold;
-}
-
-.description {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 1rem;
-    height: 100%;
-    transform: translateY(101%);
-    transition: transform 0.4s ease-in;
-}
-
-.description h3{
-    font-family: 'Electrolize', sans-serif;
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-}
-
-/* Hover Description */
-.card:hover .description {
-    transform: translateY(0);
+.allPrice {
+    border-left: 1px solid;
 }
