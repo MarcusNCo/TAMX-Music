@@ -4,6 +4,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 *::-webkit-scrollbar {
     width: 12px;
@@ -32,6 +33,7 @@ html, body {
     background-image: url();
     background-size: contain;
     background-repeat: no-repeat;
+    
 }
 header{
     position: absolute;
@@ -41,18 +43,21 @@ header{
     left: 0;
     padding: 0 1rem;
 }
-a{
+/* a{
     
     color: #313031 !important;
     
-}
-.navbar {
+} */
+
+.navbar{
     padding: 2rem 2rem;
     height: 0rem;
     min-height: 20vh;
     position: fixed;
-    background-color: transparent;
+    background: transparent;  
+    
     border: transparent;
+    transition: all 0.3s ease-out;
 }
 
 .navbar-toggler:focus {
@@ -65,7 +70,7 @@ a{
     align-items: center;
 }
 .nav-item a {
-    color: #313031;
+    
     text-decoration: none;
     font: 16px;
     margin: 0px 5px;
@@ -75,7 +80,6 @@ a{
     text-align: center;
 
 }
-
 
 img {
     max-width: 100%;
@@ -88,7 +92,7 @@ img {
 
 @media (max-width: 991px) {
     .nav-item{
-        background-color: #b6b9c8ce;
+        background-color: #f1f1f1;
     }
     .navbar-toggler{
         border: none;
@@ -96,8 +100,6 @@ img {
     .logo{
         display: none;
     }
-    
-    
 }
 
 /* Top & Bottom Borders Out */
@@ -107,7 +109,6 @@ a:before, a:after {
     width: 100%;
     height: 2px;
     background: #313031;
-
     content:"";
     opacity: 0;
     -webkit-transition: all 0.3s;
@@ -136,4 +137,12 @@ a:before, a:after {
     
 }
 
+.anim-nav {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+    background: -webkit-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+    background: -moz-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+    background: -o-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+    background: linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+}
 
