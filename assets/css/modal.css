@@ -14,7 +14,7 @@
     border: 3px solid #313031;
 }
 
-.modal {
+#myModal {
     width: 50rem;
     height: 30rem;
     position: absolute;
@@ -25,6 +25,44 @@
     background-color: #E9E9E9;
     overflow-y: hidden;
 }
+
+.product {
+    width: 75%;
+}
+
+@media screen and (max-width:414px) {
+    #myModal {
+        width: 23rem;
+        height: 40rem;
+        flex-direction: column;
+        
+    }
+
+    .blockColor{
+        display: none;
+    }
+    .imgModal {
+        width: 13rem;
+        height: 9rem;
+        object-fit: contain;
+    }
+
+    .allPrice {
+        width: 100%;
+        border-top: 1px solid #FF3F3A;
+        border-left: none;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .priceTitle {
+        color: #FF3F3A;
+    }
+}
+
+
 
 .modalBg {
     display: none;
@@ -53,11 +91,19 @@
     z-index: 10;
 }
 
+@media screen and (max-width:414px) {
+    .imgModal {
+        width: 13rem;
+        object-fit: contain;
+    }
+}
+
 .btnBuy {
     margin-left: 5rem;
     margin-bottom: 2rem;
     font-family: "Electrolize";
     font-weight: bold;
+    z-index: 10;
 }
 
 .btn {
@@ -116,6 +162,7 @@
     
 }
 
+
 .productPrice, .productTitle {
     font-family: "Electrolize";
     margin-left: 1rem;
@@ -125,3 +172,6 @@
     font-family: "Electrolize";
 }
 
+.allPrice {
+    border-left: 1px solid;
+}
