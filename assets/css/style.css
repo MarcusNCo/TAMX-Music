@@ -81,7 +81,8 @@ main{
 
 .description {
     font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     position: absolute;
     left: 0;
     right: 0;
@@ -94,7 +95,7 @@ main{
 
 .description h3{
     font-family: 'Electrolize', sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
 }
@@ -102,4 +103,9 @@ main{
 /* Hover Description */
 .card:hover .description {
     transform: translateY(0);
+}
+
+.card:hover img {
+    transform: translateY(0);
+    opacity: 0.2;
 }
