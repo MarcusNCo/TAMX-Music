@@ -9,26 +9,29 @@ fetch('./assets/data/instruments.json') // aller chercher le json
         allProducts = datas;
         // automatise l'ensemble de l'objet datas pour récuperer ses propriétés et permettre de ne plus être limiter si on ajoute une catégorie
         for (const property in datas) {
-            datas[property].forEach((element) => { 
+            datas[property].forEach((element) => {
                 container.innerHTML +=
                     `
-                    <div class="card w-auto h-auto">
-                        <img src="${element.product_poster}" alt="image du produit">
+                    <div class="card col-12 col-sm-6 col-md-6 col-lg-5">
+                        <img class="overview" src="${element.product_poster}" alt="${element.product_poster}">
                         <div class="cardInfo">
                             <h3>${element.original_title}</h3>
                             <span>${element.vote_average}</span>
                         </div>
                         <div class="price">
                             <h4>${element.product_price}</h4>
-                            <span><img src="https://trello.com/1/cards/61fbf22639dd631a43412b82/attachments/61fd0636fc6735413bfa28f6/download/icons8-sac-de-courses-32.png" class="productItem" data-cat=${property} id=${element.id} alt=""></span>
+                            <span><a><img 
+                            class='img productItem' 
+                            src="https://trello.com/1/cards/61fbf22639dd631a43412b82/attachments/61fd0636fc6735413bfa28f6/download/icons8-sac-de-courses-32.png" 
+                            data-cat=${property} id=${element.id} alt=""> </a></span>
                         </div>
                         <div class="description">
-                            <h3>Description</h3>
+                            <h3>${element.second_title}</h3>
                             ${element.description}
                         </div>
                     </div>
-                    `
-                ;
+
+                    `;
             });
         }
 
@@ -57,14 +60,14 @@ fetch('./assets/data/instruments.json') // aller chercher le json
                         [event.target.getAttribute('id'), 1]
                     ])); // on push un panier
                 }
-                
+
             })
         });
 
     })
 const displayCart = (itemJson) => {
     product.innerHTML +=
-    `
+        `
     <div>
         <div class="priceTitle w-100 d-flex justify-content-between">
         <h4 class="productPrice">${itemJson.original_title}</h4>
@@ -93,7 +96,7 @@ const displayCart = (itemJson) => {
         </div>
     </div>
     `
-}        
+}
 // affichage des elements du panier
 const loadCart = (datas) => {
     let cart = JSON.parse(localStorage.getItem('cart'));
@@ -101,7 +104,7 @@ const loadCart = (datas) => {
     let totalHt = 0;
     let totalTtc = 0;
     product.innerHTML = "";
-    
+
     cart.forEach(itemCart => {
         datas.clavier.forEach(itemJson => {
             if (itemCart[0] == itemJson.id) {
@@ -149,7 +152,7 @@ const loadCart = (datas) => {
         resultHT.innerHTML = `${totalProductHt} €`;
         resultTTC.innerHTML = `${totalProductTtc} €`;
     });
-    
+
 }
 // Button reset panier
 resetCart.addEventListener('click', () => {
@@ -171,7 +174,7 @@ closeModalBuy.addEventListener('click', () => {
     myModal.style.display = 'none';
     myModalBg.style.display = 'none';
 });
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == myModalBg) {
         myModalBg.style.display = "none";
     }
@@ -180,7 +183,7 @@ const navigation = document.querySelector('nav')
 
 window.addEventListener('scroll', () => {
 
-    if (window.scrollY > 500){
+    if (window.scrollY > 500) {
         navigation.classList.add('anim-nav')
     } else {
         navigation.classList.remove('anim-nav')

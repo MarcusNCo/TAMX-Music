@@ -30,7 +30,7 @@ html, body {
     top: 0;
     left: 0;
     scroll-behavior: smooth;
-    background-image: url(/assets/img/pexels-stas-knop-1228497.jpg);
+    background-image: url(/assets/img/BG.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     
@@ -219,11 +219,12 @@ header{
     left: 0;
     padding: 0 1rem;
 }
-/* a{
+a{
     
-    color: #313031 !important;
+    color: #FF3F3A !important;
+    font: 20px;
     
-} */
+} 
 
 .navbar{
     padding: 2rem 2rem;
@@ -248,7 +249,7 @@ header{
 .nav-item a {
     
     text-decoration: none;
-    font: 16px;
+    font: 20px;
     margin: 0px 5px;
     padding: 5px 10px;
     position: relative;
@@ -314,10 +315,121 @@ a:before, a:after {
 }
 
 .anim-nav {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3px);
-    background: -webkit-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: -moz-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: -o-linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
-    background: linear-gradient(-180deg,rgba(224,221,214,0.3), rgba(163,163,163,0.5));
+    background: -webkit-linear-gradient(-180deg,rgba(224, 221, 214, 0.11), rgba(88, 88, 88, 0.5));
+    background: -moz-linear-gradient(-180deg,rgba(224, 221, 214, 0.11), rgba(88, 88, 88, 0.5));
+    background: -o-linear-gradient(-180deg,rgba(224, 221, 214, 0.11), rgba(88, 88, 88, 0.5));
+    background: linear-gradient(-180deg,rgba(224, 221, 214, 0.11), rgba(88, 88, 88, 0.5));
+}
+
+/* Border Design */
+
+.card:nth-child(odd){
+    background-color: #1216f7b7;
+}
+
+.card:nth-child(even){
+    background-color: #ff9a3bd5;
+}
+
+/* Card Design */
+#container {
+    margin-top: 10rem;
+}
+
+.card{
+    z-index: 1;
+    width: 350px;
+    height: 550px;
+    margin: 2rem;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: black;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 50%;
+    margin: 0;
+}
+
+.cardInfo{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.cardInfo h3{
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.cardInfo span{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.price{
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.price h4{
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+}
+.price span{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    height: 50%;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+.description h3{
+    font-family: 'Electrolize', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+/* Hover Description */
+.card:hover .description {
+    background: rgba(0,0,0,0.9);
+    transform: translateY(0);
+}
+
+.overview:hover .img{
+    transform: translateY(0);
+    opacity: 0.2;
+}
+
+.img{
+    cursor: pointer;
 }
