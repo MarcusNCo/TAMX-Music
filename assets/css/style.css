@@ -55,7 +55,7 @@ html, body {
     height: 30rem;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     display: flex;
     background-color: #E9E9E9;
