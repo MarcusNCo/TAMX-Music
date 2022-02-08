@@ -90,7 +90,7 @@ const displayCart = (itemJson) => {
                     <li><a class="dropdown-item" id="10" href="#">10</a></li>
                 </ul>
             </div>
-            <img class="pictureBin" id="binBtn" src="assets/img/Bin (1).png" alt="corbeille">
+            <img class="pictureBin btnDelete" id="binBtn" src="assets/img/Bin (1).png" alt="corbeille">
         </div>
     </div>
     `
@@ -177,3 +177,32 @@ window.onclick = function(event) {
         myModalBg.style.display = "none";
     }
 }
+
+// btnDelete
+let btnDelete = document.querySelectorAll('.btnDelete');
+console.log(btnDelete);
+
+btnDelete.forEach(element => {
+    element.addEventListener('click', (event) => {
+        let cart = JSON.parse(localStorage.getItem('cart')); // on recupere le panier
+
+        // if (cart) {
+        //     let productExist = 0 // on regarde si le produit existe
+        //     cart.forEach(item => {
+        //         if (item[0] == event.target.getAttribute('id')) { // si il existe on ajoute 1 à sa quantité
+        //             productExist = 1;
+        //             item[1]++;
+        //         }
+        //     });
+        //     if (!productExist) { // s'il existe pas, on le crée avec une quantité de 1
+        //         cart.push([event.target.getAttribute('id'), 1]);
+        //     }
+        //     localStorage.setItem('cart', JSON.stringify(cart)); // on push le nouveau panier dans le local storage
+        // } else {
+        //     localStorage.setItem("cart", JSON.stringify([
+        //         [event.target.getAttribute('id'), 1]
+        //     ])); // on push un panier
+        // }
+        
+    })
+});
