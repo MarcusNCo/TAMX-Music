@@ -30,7 +30,7 @@ html, body {
     top: 0;
     left: 0;
     scroll-behavior: smooth;
-    background-image: url(./assets/img/BG.jpg);
+    background-image: url(/assets/img/BG.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     
