@@ -22,7 +22,6 @@ fetch('./assets/data/instruments.json') // aller chercher le json
                             <h4>${element.product_price}</h4>
                             <span><img src="https://trello.com/1/cards/61fbf22639dd631a43412b82/attachments/61fd0636fc6735413bfa28f6/download/icons8-sac-de-courses-32.png" class="productItem" data-cat=${property} id=${element.id} alt=""></span>
                         </div>
-
                         <div class="description">
                             <h3>Description</h3>
                             ${element.description}
@@ -177,32 +176,3 @@ window.onclick = function(event) {
         myModalBg.style.display = "none";
     }
 }
-
-// btnDelete
-let btnDelete = document.querySelectorAll('.btnDelete');
-console.log(btnDelete);
-
-btnDelete.forEach(element => {
-    element.addEventListener('click', (event) => {
-        let cart = JSON.parse(localStorage.getItem('cart')); // on recupere le panier
-
-        // if (cart) {
-        //     let productExist = 0 // on regarde si le produit existe
-        //     cart.forEach(item => {
-        //         if (item[0] == event.target.getAttribute('id')) { // si il existe on ajoute 1 à sa quantité
-        //             productExist = 1;
-        //             item[1]++;
-        //         }
-        //     });
-        //     if (!productExist) { // s'il existe pas, on le crée avec une quantité de 1
-        //         cart.push([event.target.getAttribute('id'), 1]);
-        //     }
-        //     localStorage.setItem('cart', JSON.stringify(cart)); // on push le nouveau panier dans le local storage
-        // } else {
-        //     localStorage.setItem("cart", JSON.stringify([
-        //         [event.target.getAttribute('id'), 1]
-        //     ])); // on push un panier
-        // }
-        
-    })
-});
