@@ -74,27 +74,7 @@ const displayCart = (itemJson) => {
         <h4 class="productTitle">${itemJson.product_price} </h4>
     </div>
     <img class="imgModal m-3" src="${itemJson.product_poster}" alt="">
-    <div class="quantityDeleteValid w-100 d-flex justify-content-around">
-        <div class="blockQuantityDelete w-100 h-50">
-            <div class="input-group w-25 mb-3">
-                <button class="btn btn-dark dropdown-toggle btnQuantity" type="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">Qté</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" id="1" href="#">1</a></li>
-                    <li><a class="dropdown-item" id="2" href="#">2</a></li>
-                    <li><a class="dropdown-item" id="3" href="#">3</a></li>
-                    <li><a class="dropdown-item" id="4" href="#">4</a></li>
-                    <li><a class="dropdown-item" id="5" href="#">5</a></li>
-                    <li><a class="dropdown-item" id="6" href="#">6</a></li>
-                    <li><a class="dropdown-item" id="7" href="#">7</a></li>
-                    <li><a class="dropdown-item" id="8" href="#">8</a></li>
-                    <li><a class="dropdown-item" id="9" href="#">9</a></li>
-                    <li><a class="dropdown-item" id="10" href="#">10</a></li>
-                </ul>
-            </div>
-            <img class="pictureBin btnDelete" id="binBtn" src="assets/img/Bin (1).png" alt="corbeille">
-        </div>
-    </div>
+    
     `
 }
 // affichage des elements du panier
