@@ -15,6 +15,7 @@ main{
     border-color: #1217F7;
     border-style: solid;
 }
+
 .card:nth-child(even){
     border-color: #FF993B;
     border-style: solid;
@@ -22,6 +23,7 @@ main{
 
 /* Card Design */
 .card{
+    z-index: 1;
     width: 350px;
     height: 550px;
     margin: 2rem;
@@ -34,7 +36,6 @@ main{
 }
 
 .card img{
-
     width: 100%;
     height: 50%;
     margin: 0;
@@ -84,30 +85,36 @@ main{
 .description {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 0;
     padding: 1rem;
-    height: 100%;
-    transform: translateY(101%);
+    height: 50%;
+    transform: translateY(-100%);
     transition: transform 0.4s ease-in;
 }
 
 .description h3{
     font-family: 'Electrolize', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
 
 /* Hover Description */
 .card:hover .description {
+    background: rgba(0,0,0,0.9);
     transform: translateY(0);
 }
 
-.card:hover img {
+
+.overview:hover .img{
     transform: translateY(0);
     opacity: 0.2;
+}
+
+.img{
+    cursor: pointer;
 }
