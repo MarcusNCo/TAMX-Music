@@ -101,7 +101,7 @@
         {
             "id": 11,
             "original_title": "Elektron Analog Rytm MKII Black",
-            "second_title": "8 voix de batterie - chacune avec : 1 générateur de sons de percussion analogique sélectionnable, 1 moteur de lecture d'échantillons, 1 filtre multimode analogique, 1 circuit d'overdrive analogique, 1 enveloppe de filtre, 1 enveloppe d'ampli, 1 LFO assignable",
+            "second_title": "8 voix de batterie",
             "description": "Distorsion analogique et effet maître du compresseur",
             "product_poster": "https://img.audiofanzine.com/images/u/product/normal/elektron-analog-rytm-203006.jpg",
             "product_price": "1.499 €",
@@ -110,7 +110,7 @@
         {
             "id": 12,
             "original_title": "Arturia DrumBrute Impact",
-            "second_title": "10 sons: Kick, Snare 1, Snare 2, Tom Hi, Tom Low, Cowbell, Cymbal, Closed Hat, Open Hat, 64 patterns avec chacun jusqu'à 64 pas",
+            "second_title": "10 sons: Kick, Snare 1, Snare 2, Tom Hi, Tom Low, Cowbell, Cymbal, Closed Hat, Open Hat",
             "description": "Accentuation et coloration des couleurs sonores commutables par instrument et par pas",
             "product_poster": "https://img.audiofanzine.com/images/u/product/normal/arturia-drumbrute-impact-272315.jpg",
             "product_price": "259 €",
@@ -137,7 +137,7 @@
         {
             "id": 15,
             "original_title": "Native Instruments Maschine Mikro MK3",
-            "second_title": "Se compose d'un contrôleur USB et d'un logiciel machine 16 pads multicolores éclairés avec vélocité et aftertouch",
+            "second_title": "Se compose d'un contrôleur USB et d'un logiciel machine 16 pads",
             "description": "Fonctions Groovebox : 16 niveaux de vélocité, Swing, Pad Link, Note Repeat, ainsi que l'émulation d'échantillonnage MPC 60 et SP-1200, importation de fichiers REX2 et de programmes MPC, exportation MIDI et audio par glisser-déposer",
             "product_poster": "https://www.stars-music.fr/medias/native-instruments/maschine-hd-2-172280.png",
             "product_price": "215 €",

@@ -12,13 +12,11 @@ main{
 /* Border Design */
 
 .card:nth-child(odd){
-    border-color: #1217F7;
-    border-style: solid;
+    background-color: #1216f7b7;
 }
 
 .card:nth-child(even){
-    border-color: #FF993B;
-    border-style: solid;
+    background-color: #ff9a3bd5;
 }
 
 /* Card Design */
@@ -29,8 +27,8 @@ main{
     margin: 2rem;
     border-radius: 4px;
     border-width: 2px;
+    border-color: black;
     box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
-    background-color: rgb(197, 194, 194);
     position: relative;
     overflow: hidden;
 }
@@ -108,7 +106,6 @@ main{
     background: rgba(0,0,0,0.9);
     transform: translateY(0);
 }
-
 
 .overview:hover .img{
     transform: translateY(0);
